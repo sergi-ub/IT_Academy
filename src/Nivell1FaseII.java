@@ -48,10 +48,10 @@ public class Nivell1FaseII {
 		− Haurem de preguntar si es vol seguir demanant menjar. Podeu fer servir el sistema (1:Si / 0:No), 
 		per tant haureu de crear un altre variable int per guardar la informació.*/
 		
-		boolean continuar = true; //Assignació
+		boolean continuar = true; 
 		ArrayList<String> peticio = new ArrayList<String>();
 
-		while (continuar == true) { //Comprobació
+		while (continuar == true) { 
 			String plat = JOptionPane.showInputDialog(contenidor.toString() + "\n Quin nº de plat vols prendre");
 			peticio.add(plat);
 			

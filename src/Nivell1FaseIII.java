@@ -6,14 +6,6 @@ import javax.swing.JOptionPane;
 public class Nivell1FaseIII {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int cinc = 5;
-		int deu = 10;
-		int vint = 20;
-		int cinquanta = 50;
-		int cent = 100;
-		int dosCents = 200;
-		int cincCents =500;
 		
 		String [] plats = new String[7];
 		int [] preus = new int[7];
@@ -22,35 +14,28 @@ public class Nivell1FaseIII {
 		int preuBase = 3;
 		while (comptador <= 7)
 		{
-		    plats[comptador-1] = "Plat " + comptador; // Cada plat s'enumera des del 1 al 7.
-		    preus[comptador-1] = comptador + preuBase; // El preu per cada plat va augmentant de forma descendent. El preu mínim per plat es de 3 euros.
+		    plats[comptador-1] = "Plat " + comptador; 
+		    preus[comptador-1] = comptador + preuBase; 
 		    
 		    comptador++;
 		}
 		
-		HashMap<String, Integer> contenidor = new HashMap <String, Integer>(); //Els mètodes van amb parèntesi
+		HashMap<String, Integer> contenidor = new HashMap <String, Integer>();
 		
 		comptador = 0;
 		
 		while (comptador <= 6)
 		{
 		    contenidor.put(plats[comptador], preus[comptador]);
-			comptador++;
-			
+			comptador++;	
 		}
 		
-		System.out.println(contenidor +" €");
+		System.out.println(contenidor);
 		
-		/*
-		- Un cop plens els dos arrays haurem de mostrar-los i preguntar que es vol per menjar, guardarem la 
-		informació en una List fent servir un bucle while.
-		− Haurem de preguntar si es vol seguir demanant menjar. Podeu fer servir el sistema (1:Si / 0:No), 
-		per tant haureu de crear un altre variable int per guardar la informació.*/
-		
-		boolean continuar = true; //Assignació
+		boolean continuar = true; 
 		ArrayList<String> peticio = new ArrayList<String>();
 
-		while (continuar == true) { //Comprobació
+		while (continuar == true) {
 			String plat = JOptionPane.showInputDialog(contenidor.toString() + "\n Quin nº de plat vols prendre");
 			peticio.add(plat);
 
